@@ -1,4 +1,4 @@
-# 01: Statistical Methodology & Selection Notes
+# 01: Statistical Methodology 
 
 This document details the statistical rationale behind the tests applied to generate the baseline characteristics table.
 
