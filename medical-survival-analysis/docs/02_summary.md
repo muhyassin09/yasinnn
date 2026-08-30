@@ -1,4 +1,4 @@
-# Procedure 03: Kaplan-Meier Survival Analysis - Clinical Summary
+# 02: Kaplan-Meier Survival Analysis - Clinical Summary
 
 ## Objective
 To estimate and compare the cumulative survival probabilities of heart failure patients over time, stratified by their baseline hypertension status (`Hypertension: Yes` vs. `Hypertension: No`).
