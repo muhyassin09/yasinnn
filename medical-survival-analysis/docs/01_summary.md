@@ -1,4 +1,4 @@
-01: Baseline Characteristics Summary & Interpretation
+# 01: Baseline Characteristics Summary & Interpretation
 
 ## Objective
 To describe and analyze the baseline demographic, clinical, and laboratory characteristics of 299 heart failure patients, stratified by clinical outcome (`Deceased` vs. `Survived`). This analysis identifies key clinical variables significantly associated with patient mortality.
