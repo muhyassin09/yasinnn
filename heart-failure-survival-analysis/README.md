@@ -84,22 +84,22 @@ full follow-up period.
 
 ```
 heart-failure-portfolio/
-├── README.md                              ← you're here
+├── analysis/
+│   └── heart_failure_survival_analysi│vs.ipynb
 ├── data/
 │   └── heart_failure_clinical_records_dataset.csv
-├── analysis/
-│   └── heart_failure_survival_analysis.ipynb
-│       
 ├── docs/
 │   ├── 01_data_loading_notes.md
 │   ├── 02_table1_notes.md
 │   ├── 03_km_notes.md
 │   ├── 04_cox_model_notes.md
 │   └── 05_assumption_check_notes.md
-└── outputs/
-    ├── table1_baseline_characteristics.csv
-    ├── km_curve_hypertension.png
-    └── cox_ph_hazard_ratios.csv
+├── outputs/
+│   ├── table1_baseline_characteristics.csv
+│   ├── km_curve_hypertension.png
+│   └── cox_ph_hazard_ratios.csv
+│
+└──  README.md                     ← you're here
 ```
 
 ---
