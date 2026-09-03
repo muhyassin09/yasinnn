@@ -1,4 +1,4 @@
-# Phase 2: Baseline Characteristics (Table 1)
+# Phase B: Baseline Characteristics (Table 1)
 
 ## Objective
 
