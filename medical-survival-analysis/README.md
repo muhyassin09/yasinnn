@@ -1,5 +1,4 @@
-# Heart Failure Survival Analysis: A Clinical Biostatistics Portfolio Project
-
+# Heart Failure Survival Analysis
 ## Overview
 
 This project performs a complete survival analysis on the **UCI Heart Failure
