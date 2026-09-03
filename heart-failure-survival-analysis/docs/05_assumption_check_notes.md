@@ -108,8 +108,4 @@ None. All four covariates passed on the first assumption check, requiring
 no remedial modeling steps (such as stratification or the addition of
 time-varying covariate terms). This clean result is recorded in full
 detail here, including the exact per-covariate test statistics, rather
-than reported only as a pass/fail verdict — a specific, citable table
-(test statistic and p-value per variable) is what a clinical reviewer
-expects to see referenced when a Schoenfeld residuals test is claimed to
-have been performed, rather than a general statement that the check "was
-run" and "passed."
+than reported only as a pass/fail verdict.
