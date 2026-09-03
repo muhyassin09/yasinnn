@@ -1,4 +1,4 @@
-# Phase 1: Data Loading & Validation
+# Phase A: Data Loading & Validation
 
 ## Objective
 
