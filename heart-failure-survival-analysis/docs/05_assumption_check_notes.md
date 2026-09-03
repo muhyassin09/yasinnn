@@ -1,4 +1,4 @@
-# Phase 5: Proportional Hazards Assumption Check (Schoenfeld Residuals)
+# Phase E: Proportional Hazards Assumption Check (Schoenfeld Residuals)
 
 ## Objective
 
