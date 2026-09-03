@@ -85,15 +85,12 @@ full follow-up period.
 
 ```
 heart-failure-portfolio/
-├── README.md                              ← this file
+├── README.md                              ← project overview + headline findings
 ├── data/
 │   └── heart_failure_clinical_records_dataset.csv
-├── notebooks/
-│   ├── 01_data_loading_validation.ipynb
-│   ├── 02_table1_baseline_characteristics.ipynb
-│   ├── 03_kaplan_meier_survival.ipynb
-│   ├── 04_cox_proportional_hazards.ipynb
-│   └── 05_assumption_check.ipynb
+├── analysis/
+│   └── heart_failure_survival_analysis.py  ← single combined script (all 5 phases)
+│       (or .ipynb if you want it runnable cell-by-cell in Colab)
 ├── docs/
 │   ├── 01_data_loading_notes.md
 │   ├── 02_table1_notes.md
