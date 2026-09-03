@@ -89,7 +89,7 @@ heart-failure-portfolio/
 ├── data/
 │   └── heart_failure_clinical_records_dataset.csv
 ├── analysis/
-│   └── heart_failure_survival_analysis.py
+│   └── heart_failure_survival_analysis.ipynb
 │       
 ├── docs/
 │   ├── 01_data_loading_notes.md
