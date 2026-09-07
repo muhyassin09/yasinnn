@@ -93,7 +93,7 @@ This repository is split into five functional modules to mimic production-level 
 
 ### 📊 Strategic Breakdown of Regional Fiscal Archetypes
 
-In plain terms, reading the pattern reveals distinct, structurally entrenched fiscal behaviors across the archipelago (Siregar & Kurniawan, 2022):
+In plain terms, here's what the four groups actually look like:
 * **🟢 Fiscally Autonomous (156 regions):** Mostly Java and Bali — forming the nation's core industrial and tourism belt driven by mature internal consumer markets. These regions raise enough of their own tax and local revenue that they do not need to lean on the central government much. Example: Kab. Badung, Bali — its tourism income alone comfortably covers its budget.
 * **⚪ Stable / Average (232 regions):** Anchoring across Sumatera and Sulawesi provinces — representing the largest, most "typical" macroeconomic baseline group in the distribution. Not struggling, not standout — just steady, typical regions with no extreme story either way.
 * **🟡 Resource-Windfall Overperformers (46 regions):** Concentrated in Kalimantan and Papua Tengah — mining and resource royalty regions whose numbers look strong, but mostly because of massive commodity injections like sudden windfalls from coal, nickel, palm oil, or gold rather than independent revenue systems. That kind of income can vanish fast if commodity prices fall.
