@@ -42,5 +42,4 @@ Each notebook is single-responsibility and self-documenting — every one opens 
 * **Tools & Workflow:** Git, GitHub, Jupyter Ecosystem
 
 ### 📬 Connect With Me
-* **LinkedIn:** [🔗 Your LinkedIn Profile](https://linkedin.com/in/your-username)
-* **Email:** [your.email@example.com](mailto:your.email@example.com)
+* **Email:** [muh.yassin09@gmail.com](mailto:muh.yassin09@gmail.com)
