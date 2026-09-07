@@ -1,14 +1,35 @@
 ### Project Title: Indonesian Municipal Fiscal Analytics Framework
 ### 📌 Project Overview
-This project analyzes fiscal autonomy across Indonesia's 508 regencies and cities using 2023 BPS fiscal indicator data [🔗 View Data](https://www.bps.go.id/id/publication/2024/12/20/6453851e55f22f31c4d30141/statistik-keuangan-pemerintah-provinsi-2023-dan-2024.html). The goal is to segment regions into interpretable fiscal profiles — from centrally-dependent to fiscally autonomous — so that patterns in revenue independence, tax capacity, and spending behavior can inform policy discussion around eastern-Indonesia fiscal gaps and resource-windfall regions.
+This project analyzes fiscal autonomy across Indonesia's 508 kabupaten/kota (regencies and cities) using 2023 BPS fiscal indicator data. The goal is to segment regions into interpretable fiscal profiles — from centrally-dependent to fiscally autonomous — so that patterns in revenue independence, tax capacity, and spending behavior can inform policy discussion around eastern-Indonesia fiscal gaps and resource-windfall regions.
+
+# Why?
+**Situation:** Since 2001, Indonesia has let each of its 508 regions (kabupaten/kota — regencies and cities) manage its own budget instead of depending entirely on the central government.
+
+**Task:** Some regions handle that freedom well; others still lean heavily on Jakarta for money. But with 508 regions and 8 different financial ratios per region, that pattern is invisible in a spreadsheet — you'd need to stare at thousands of numbers to see it.
+
+**Action:** This project groups all 508 regions by how similar their financial behavior is (using a clustering technique called K-Means), so regions that "act alike" financially end up in the same group — without assuming in advance what those groups should look like.
+
+**Result:** Four distinct financial "personalities" emerged from the data. No region was told which group it belonged to — the numbers sorted themselves.
 
 ### 🛠️ Tech Stack & Tools
 * **Languages:** Python (v3.12+)
-* **Libraries:** Pandas, NumPy, Scikit-Learn (StandardScaler, KMeans, PCA, silhouette_score), Matplotlib, Seaborn
+* **Libraries:** Pandas, NumPy, pdfplumber, re (regex), Scikit-Learn (StandardScaler, KMeans, PCA, silhouette_score), Matplotlib, Seaborn
 * **Environment:** Jupyter Notebooks (Google Colab compatible), Git/GitHub
 
 ### 📂 Modular Project Pipeline
-This repository is split into four functional modules to mimic production-level data engineering pipelines. Below is the breakdown of each notebook's role, methodology, and technical handoff.
+This repository is split into five functional modules to mimic production-level data engineering pipelines. Below is the breakdown of each notebook's role, methodology, and technical handoff.
+
+### 📓 00. Data Acquisition
+* **Notebook Link:** [🔗 View Notebook](./notebooks/00_data_acquisition.ipynb)
+* **Objective:** Document where the raw fiscal data comes from and how all 8 fiscal ratio tables were extracted from the BPS PDF publication into a flat, analysis-ready CSV.
+* **Source:** *Statistik Keuangan Pemerintah Kabupaten/Kota 2023 dan 2024* (BPS-Statistics Indonesia), 520 pages, text-based tables. [View publication](https://www.bps.go.id/id/publication/2024/12/31/6a4becee62edbb7320b6a81e/statistik-keuangan-pemerintah-kabupaten-kota-2023-dan-2024.html)
+* **Key Findings:**
+  * Figures are the DJPK/Ministry of Finance's **realized 2023** APBD data — the 2024 column in the same publication is budget/anggaran (not yet realized) and was deliberately excluded to keep every source in the project on the same fiscal year.
+  * Every page carries a diagonal BPS watermark rendered in an oversized font (>10.5pt) that interleaves with the real table text (7–10pt) during naive extraction (e.g. `Kab. Aceh Besar o8,59`). Filtering `page.chars` by font size before calling `extract_text()` removes it cleanly.
+  * `~0` values (e.g. Kab. Pegunungan Arfak's `rasio_pajak`) are BPS's own notation for a real near-zero figure and are recorded as `0.0`, not treated as missing.
+  * DKI Jakarta is absent from the output **by design**: it has no separate kabupaten/kota APBDs, since its kotamadya are administrative subdivisions of one integrated provincial budget.
+  * Extraction was validated two ways: shape/merge asserts (508 rows, 37 provinces, 0 NaNs after an outer join) and independent spot-checks against known facts — Kab. Badung (Bali) tops `rasio_kemandirian_2023` as expected from its tourism revenue base, and remote Papuan regencies sit at the bottom of `rasio_pajak`, consistent with near-zero local tax bases.
+* **Handoff:** Saves the consolidated raw dataset to `data/raw/fiscal_indicators_indonesia_2023.csv` (508 rows × 10 columns, kabupaten/kota-level, 2023 realization).
 
 ### 📓 01. Data Preprocessing
 * **Notebook Link:** [🔗 View Notebook](./notebooks/01_data_preprocessing.ipynb)
@@ -70,6 +91,21 @@ This repository is split into four functional modules to mimic production-level 
 * **Not covered** (deliberately out of scope): spatial autocorrelation (needs region boundary geometry), VaR/CVaR-style risk modeling (not supportable on single-year cross-sectional ratios), transfer allocation optimization (inputs not in current data).
 * **Handoff:** Saves the final dataset to `data/processed/fiscal_clustered_indonesia_2023.csv`.
 
+# So?
+In plain terms, here's what the four groups actually look like:
+
+* 🟢 **Fiscally Autonomous (156 regions)** — Mostly Java and Bali. These regions raise enough of their own tax and local revenue that they don't need to lean on the central government much. Example: Kab. Badung, Bali — its tourism income alone comfortably covers its budget.
+* ⚪ **Stable / Average (232 regions)** — The largest group, spread across Sumatera and Sulawesi. Not struggling, not standout — just steady, "typical" regions with no extreme story either way.
+* 🟡 **Resource-Windfall Overperformers (46 regions)** — Concentrated in Kalimantan and Papua Tengah. Their numbers look strong, but mostly because of mining and natural-resource money — not because they built independent revenue systems. That kind of income can vanish fast if commodity prices fall.
+* 🔴 **Dependent / Underperforming (74 regions)** — Concentrated in eastern Indonesia (NTT, Maluku, Papua). These regions still rely heavily on central government transfers and haven't built up much of their own tax base.
+
+**The takeaway:** Indonesia's decentralization didn't "succeed" or "fail" — it produced four different outcomes depending on the region. A single national funding formula would help some of these groups and completely miss the other three.
+
+**A challenge worth raising:** a region landing in "Dependent" doesn't automatically mean poor management — it could just be small, rural, or remote, with little to tax in the first place. Grouping by financial ratios alone can't tell the difference between "mismanaged" and "genuinely has less to work with." A fair next step would be to check each cluster against basic facts like population size and geography before drawing conclusions about *why* a region ended up where it did.
+
+**One direction that could work:** instead of one policy for all 508 regions, tailor support to the group — help "Dependent" regions build local tax systems, require "Resource-Windfall" regions to save part of their windfall for leaner years, and study what "Fiscally Autonomous" regions did right so it can be copied elsewhere.
+
+
 ### 🚀 How To Run This Project
 1. Clone this repository to your local machine:
 ```bash
@@ -79,5 +115,5 @@ git clone https://github.com/muhyassin09/yasinnn/tree/main/menuju-indonesia-emas
 ```bash
 pip install -r requirements.txt
 ```
-3. Place `fiscal_indicators_indonesia_2023.csv` in `data/raw/`.
-4. Navigate to the `notebooks/` directory and execute them sequentially from 01 to 04.
+3. Place `statistik-keuangan-pemerintah-kabupaten-kota-2023-dan-2024.pdf` in `data/raw/pdf/` — or run `00_data_acquisition.ipynb` to reproduce the extraction from scratch.
+4. Navigate to the `notebooks/` directory and execute them sequentially from 00 to 04.
