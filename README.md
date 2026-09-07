@@ -38,9 +38,9 @@ Each notebook is single-responsibility and self-documenting — every one opens 
 * 🔗 [View Repository](https://github.com/your-username/project-2-repo)
 
 ### 🛠️ Technical Toolbox
-* **Languages:** Python (Pandas, NumPy, Scikit-Learn), SQL
-* **Visualization:** Matplotlib, Seaborn
-* **Tools & Workflow:** Git, GitHub, Jupyter Ecosystem
+* **Language:** Python, R, SQL, etc.
+* **Visualization:** Matplotlib, Seaborn, etc.
+* **Tools & Workflow:** Git, GitHub, Jupyter Ecosystem, Microsoft Excel, etc.
 
 ### 📬 Connect With Me
 * **Email:** [muh.yassin09@gmail.com](mailto:muh.yassin09@gmail.com)
