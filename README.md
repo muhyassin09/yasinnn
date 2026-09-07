@@ -28,7 +28,7 @@ Each notebook is single-responsibility and self-documenting — every one opens 
 #### 🛠️ 1. Indonesian Municipal Fiscal Analytics Framework
 * **Core Goal:** Segment Indonesia's 508 regencies/cities into interpretable fiscal-autonomy profiles from 2023 BPS data, surfacing patterns like the eastern-Indonesia dependency gap and resource-windfall regions.
 * **Tech Stack:** Python, Pandas, NumPy, Scikit-Learn (StandardScaler, KMeans, PCA), Matplotlib, Seaborn
-* **Architecture:** 4-Part Modular Pipeline (Preprocessing ➔ Analysis ➔ Modelling ➔ Finalizing)
+* **Architecture:** 5-Part Modular Pipeline (Acquisition ➔ Preprocessing ➔ Analysis ➔ Modelling ➔ Finalizing)
 * 🔗 [View Repository](https://github.com/muhyassin09/yasinnn/tree/main/menuju-indonesia-emas-2045)
 
 #### 🛠️ 2. [Project 2 Title]
