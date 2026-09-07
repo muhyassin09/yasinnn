@@ -11,6 +11,7 @@ To keep my work reproducible and easy to follow, every project in this portfolio
 │   ├── raw/                 # Original, untouched data dumps (.csv, etc.)
 │   └── processed/           # Transformed datasets passed between notebooks
 ├── notebooks/
+|   ├── 00_data_acquisition.ipynb     -> Documents data source and extraction method
 │   ├── 01_data_preprocessing.ipynb   -> Ingestion, quality checks, cleaning
 │   ├── 02_data_analysis.ipynb        -> Distribution/EDA and feature engineering decisions
 │   ├── 03_modelling.ipynb            -> Training, tuning, and evaluation
