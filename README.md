@@ -1,7 +1,7 @@
 ### Hi, I'm Muhammad Yassin👋
 ### 📊 Statistics Graduate | Aspiring Data Scientist
 
-A results-driven Data Scientist specializing in building end-to-end machine learning pipelines. I focus on writing clean, production-grade, and highly modular code to solve complex analytical problems.
+I'm a Statistics graduate, currently building out a portfolio of data analysis projects while preparing applications for a Master of Science in Data Science or Financial Mathematics in Australia.
 
 ### 📂 Portfolio Structure & Architecture
 To keep my work reproducible and easy to follow, every project in this portfolio rejects messy, all-in-one notebooks in favor of a Standardized Modular Pipeline: each stage lives in its own notebook, with data passed cleanly between them.
