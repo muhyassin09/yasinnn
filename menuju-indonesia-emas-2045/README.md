@@ -99,7 +99,7 @@ In plain terms, reading the pattern reveals distinct, structurally entrenched fi
 * **🟡 Resource-Windfall Overperformers (46 regions):** Concentrated in Kalimantan and Papua Tengah — mining and resource royalty regions whose numbers look strong, but mostly because of massive commodity injections like sudden windfalls from coal, nickel, palm oil, or gold rather than independent revenue systems. That kind of income can vanish fast if commodity prices fall.
 * **🔴 Dependent / Underperforming (74 regions):** Concentrated heavily in eastern Indonesia (NTT, Maluku, and Papua) — mapping perfectly to the well-known eastern-Indonesia fiscal gap where local economies still rely heavily on central government transfers and have not built up much of their own tax base.
 
-A caveat worth stating plainly in any writeup is that the silhouette scores were modest (~0.21), meaning these are soft, overlapping groupings rather than hard-edged, rigid categories. That is an accurate reflection of real-world public finance data where administrative boundaries blur, not a modeling weakness to hide (Kuhn & Johnson, 2013).
+A caveat worth stating plainly in any writeup is that the silhouette scores were modest (~0.21), meaning these are soft, overlapping groupings rather than hard-edged, rigid categories. That is an accurate reflection of real-world public finance data where administrative boundaries blur, not a modeling weakness to hide.
 
 **The takeaway:** Indonesia's decentralization did not simply "succeed" or "fail" — it produced four different outcomes depending on the region. A single national funding formula would help some of these groups and completely miss the other three.
 
