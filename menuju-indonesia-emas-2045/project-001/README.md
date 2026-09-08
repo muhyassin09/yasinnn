@@ -1,4 +1,4 @@
-### Project Title: Indonesian Municipal Fiscal Analytics Framework
+### Project Title: Indonesian Municipal Fiscal Analytics with K-Means
 ### 📌 Project Overview
 This project analyzes fiscal autonomy across Indonesia's 508 kabupaten/kota (regencies and cities) using 2023 BPS fiscal indicator data. The goal is to segment regions into interpretable fiscal profiles — from centrally-dependent to fiscally autonomous — so that patterns in revenue independence, tax capacity, and spending behavior can inform policy discussion around eastern-Indonesia fiscal gaps and resource-windfall regions.
 
