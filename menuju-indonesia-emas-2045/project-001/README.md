@@ -91,7 +91,7 @@ This repository is split into five functional modules to mimic production-level 
 * **Not covered** (deliberately out of scope): spatial autocorrelation (needs region boundary geometry), VaR/CVaR-style risk modeling (not supportable on single-year cross-sectional ratios), transfer allocation optimization (inputs not in current data).
 * **Handoff:** Saves the final dataset to `data/processed/fiscal_clustered_indonesia_2023.csv`.
 
-### 📊 Strategic Breakdown of Regional Fiscal Archetypes
+## So..
 
 In plain terms, here's what the four groups actually look like:
 * **🟢 Fiscally Autonomous (156 regions):** Mostly Java and Bali — forming the nation's core industrial and tourism belt driven by mature internal consumer markets. These regions raise enough of their own tax and local revenue that they do not need to lean on the central government much. Example: Kab. Badung, Bali — its tourism income alone comfortably covers its budget.
